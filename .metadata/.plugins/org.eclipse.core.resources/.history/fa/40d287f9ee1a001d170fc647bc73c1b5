@@ -1,0 +1,71 @@
+/*
+ * interrupt.c
+ *
+ *  Created on: 2022. 8. 13.
+ *      Author: taeju
+ */
+
+#include "DSP28x_Project.h"
+//#include "define.h"
+
+
+__interrupt void cpu_timer0_isr(void);
+__interrupt void cpu_timer1_isr(void);
+__interrupt void cpu_timer2_isr(void);
+
+
+#if SINE_WAVE == 1
+float y[100], mag = 1.0, freq = 1.0, w = 0, Tsamp = 0.01, t = 0.0;
+int cnt = 0;
+#endif
+//
+// cpu_timer0_isr -
+//
+__interrupt void cpu_timer0_isr(void)
+{
+    CpuTimer0.InterruptCount++;
+
+    //
+    // Acknowledge this interrupt to receive more interrupts from group 1
+    //
+#if SINE_WAVE == 1
+    t+=Tsamp;
+    w = 2*3.141592*freq;
+    y[cnt++] = mag*sin(w*t);
+    if(cnt >= 100)    {
+        cnt=0;
+    }
+
+#endif
+    PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
+}
+
+//
+// cpu_timer1_isr -
+//
+__interrupt void cpu_timer1_isr(void)
+{
+    CpuTimer1.InterruptCount++;
+
+    //
+    // The CPU acknowledges the interrupt
+    //
+    EDIS;
+}
+
+//
+// cpu_timer2_isr -
+//
+__interrupt void cpu_timer2_isr(void)
+{
+    EALLOW;
+    CpuTimer2.InterruptCount++;
+
+    //
+    // The CPU acknowledges the interrupt.
+    //
+    EDIS;
+}
+
+
+

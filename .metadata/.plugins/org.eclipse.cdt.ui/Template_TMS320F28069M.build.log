@@ -1,0 +1,20 @@
+
+**** Build of configuration Debug for project Template_TMS320F28069M ****
+
+"C:\\ti\\ccs1120\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../Src/spi.c"
+Invoking: C2000 Compiler
+"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 --opt_for_speed=3 --include_path="C:/ptj/TI_LAUNCHXL_F28069M/Template/Template_TMS320F28069M" --include_path="C:/ptj/TI_LAUNCHXL_F28069M/Template/Template_TMS320F28069M/Inc" --include_path="C:/ti/c2000/C2000Ware_4_01_00_00/device_support/f2806x/common/include" --include_path="C:/ti/c2000/C2000Ware_4_01_00_00/device_support/f2806x/headers/include" --include_path="C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="Src/spi.d_raw" --obj_directory="Src"  "../Src/spi.c"
+"../Src/spi.c", line 35: warning #179-D: function "error" was declared but never referenced
+Finished building: "../Src/spi.c"
+ 
+Building target: "Template_TMS320F28069M.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 --opt_for_speed=3 --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"Template_TMS320F28069M.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/lib" -i"C:/ptj/TI_LAUNCHXL_F28069M/Template/Template_TMS320F28069M/Inc" -i"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/include" -i"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_21.6.0.LTS/Inc" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Template_TMS320F28069M_linkInfo.xml" --rom_model -o "Template_TMS320F28069M.out" "./Lib/F2806x_CodeStartBranch.obj" "./Lib/F2806x_CpuTimers.obj" "./Lib/F2806x_DefaultIsr.obj" "./Lib/F2806x_GlobalVariableDefs.obj" "./Lib/F2806x_PieCtrl.obj" "./Lib/F2806x_PieVect.obj" "./Lib/F2806x_SysCtrl.obj" "./Lib/F2806x_usDelay.obj" "./Src/AT45DB041D.obj" "./Src/interrupt.obj" "./Src/main.obj" "./Src/spi.obj" "./Src/timer.obj" "../28069_RAM_lnk.cmd" "../Lib/F2806x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+warning #10247-D: creating output section "ramfuncs" without a SECTIONS specification
+Finished building target: "Template_TMS320F28069M.out"
+ 
+
+**** Build Finished ****

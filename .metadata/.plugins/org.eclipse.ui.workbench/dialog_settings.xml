@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MemoryDumperFillAction">
+		<item key="com.ti.ccstudio.system.setup.ui.editors.connectionName" value="Texas Instruments XDS100v2 USB Debug Probe"/>
+		<item key="com.ti.ccstudio.system.setup.ui.editors.connectionType" value="TIXDS100v2"/>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\ti\c2000\C2000Ware_4_01_00_00\device_support\f2806x\headers\source"/>
+			<item value="C:\ti\c2000\C2000Ware_4_01_00_00\device_support\f2806x\common\source"/>
+			<item value="C:\ti\c2000\C2000Ware_4_01_00_00\device_support\f2806x\headers\cmd"/>
+		</list>
+	</section>
+</section>
